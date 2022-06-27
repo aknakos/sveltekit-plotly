@@ -4,6 +4,7 @@
   "homepage": "https://github.com/aknakos/sveltekit-plotly#readme",
   "repository": "github:aknakos/sveltekit-plotly",
   "license": "MIT",
+  "keywords": ["svelte", "sveltekit", "plotly", "visualization"],
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
