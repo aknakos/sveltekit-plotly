@@ -25,10 +25,20 @@
 		dispatch('unhover', d);
 	}
 
+	function onClick(d) {
+		dispatch('click', d);
+	}
+
+	function onSelected(d) {
+		dispatch('selected', d);
+	}
+
 	const generatePlot = (node, data, layout, config, reloadPlot) => {
 		return $PlotlyLib.newPlot(node, data, { ...layout }, { ...config }).then(() => {
 			node.on('plotly_hover', onHover);
 			node.on('plotly_unhover', onUnhover);
+			node.on('plotly_click', onClick);
+			node.on('plotly_selected', onSelected);
 			loaded = true;
 		});
 	};
@@ -51,6 +61,8 @@
 			destroy() {
 				node.removeListener('plotly_hover', onHover);
 				node.removeListener('plotly_unhover', onUnhover);
+				node.removeListener('plotly_click', onClick);
+				node.removeListener('plotly_selected', onSelected);
 				loaded = false;
 			}
 		};

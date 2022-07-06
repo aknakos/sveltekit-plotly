@@ -25,6 +25,8 @@ Full Example:
 
     function onUnhover(){};//unhover event
     function onHover(){};//hover event
+    function onClick(){};//click event
+    function onSelected(){};//selected event
 
     $: $PlotlyLib.Fx.unhover(??);// use the store's PlotlyLib to use the plotly library as you wish for any custom things
 
@@ -38,6 +40,8 @@ Full Example:
         config={}
         on:hover={onHover}
         on:unhover={onUnhover}
+        on:click={onClick}
+        on:selected={onSelected}
         bind:loaded
         {reloadPlot}
     >
