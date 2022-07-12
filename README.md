@@ -23,11 +23,6 @@ Full Example:
     let reloadPlot = 0; //change this to force reload the plot
     let loaded; // use this to know when the plot is fully loaded
 
-    function onUnhover(){};//unhover event
-    function onHover(){};//hover event
-    function onClick(){};//click event
-    function onSelected(){};//selected event
-
     $: $PlotlyLib.Fx.unhover(??);// use the store's PlotlyLib to use the plotly library as you wish for any custom things
 
 </script>
@@ -38,10 +33,11 @@ Full Example:
         data={[{x:[1,2,3], y:[2,1,3]}]}
         layout={}
         config={}
-        on:hover={onHover}
-        on:unhover={onUnhover}
-        on:click={onClick}
-        on:selected={onSelected}
+        on:hover={...}//unhover event
+        on:unhover={...}//hover event
+        on:click={...}//click event
+        on:selected={...}//selected event
+        on:relayout={...}//relayout event
         bind:loaded
         {reloadPlot}
     >

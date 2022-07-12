@@ -1,6 +1,6 @@
 {
   "name": "@aknakos/sveltekit-plotly",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "homepage": "https://github.com/aknakos/sveltekit-plotly#readme",
   "repository": "github:aknakos/sveltekit-plotly",
   "license": "MIT",
